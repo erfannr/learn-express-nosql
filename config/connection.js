@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const { PORT, DATABASE_LOCAL, DATABASE_LIVE } = require("./environment");
 
 mongoose
-  .connect(DATABASE_LIVE, {
+  .connect(DATABASE_LOCAL || DATABASE_LIVE, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
